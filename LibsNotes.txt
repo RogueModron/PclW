@@ -1,0 +1,51 @@
+Boost (1.53)
+. from a VS 32 bit command prompt
+    - bootstrap.bat
+. from a VS 64 bit command prompt
+    - bjam system variant=release link=static address-model=64
+    - bjam thread variant=release link=static address-model=64
+    - bjam system variant=release link=static address-model=32
+    - bjam thread variant=release link=static address-model=32
+
+Mpir (2.6.0)
+. /Ox /Oi
+
+Mpfr (svn 8450)
+. /Ox
+. mpfr.svn.build.vc10.zip
+
+Cgal (4.1)
+. /O2 /Ob2
+. cgal\core\filter.h
+    - #define CGAL_CFG_NO_CPP0X_ISFINITE 0
+. cgal\include\cgal\gmp\gmpzf_type.h
+    - typedef long Exponent; // typedef mpir_si Exponent;
+
+Geos (3.3.6)
+. /O2 /Ob2
+. http://trac.osgeo.org/geos/ticket/606
+
+Terralib (svn 10869)
+. /O2 /Oi
+. only boolean operations
+
+Bop (1.2)
+. /O2 /Oi
+
+Bop Cgal (1.2)
+. /O2 /Oi
+
+Clipper (5.0.3)
+. /O2 /Oi
+
+Clipper C# (5.0.3)
+. /O
+
+Gpc (2.32)
+. /O2 /Oi
+
+Gpc C# Wrapper (2.32)
+. /O
+
+KBool (1.7)
+. /O2 /Oi

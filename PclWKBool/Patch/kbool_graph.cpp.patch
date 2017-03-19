@@ -1,0 +1,17 @@
+@@ -2558,7 +2558,7 @@
+ 
+ void kbGraph::WriteGraphKEY(Bool_Engine* GC)
+ {
+-
++#if KBOOL_DEBUG
+     double scale = 1.0/GC->GetGrid()/GC->GetGrid();
+ 
+     FILE* file = fopen("keygraphfile.key", "w");
+@@ -2618,6 +2618,7 @@
+             ");
+ 
+     fclose (file);
++#endif
+ }
+ 
+ 
